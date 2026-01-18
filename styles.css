@@ -1,0 +1,267 @@
+/* ========================================
+   CSS Variables - Terminal Color Scheme
+   ======================================== */
+:root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #0d1117;
+    --text-primary: #d4d4d4;
+    --text-secondary: #858585;
+    --accent-color: #4ec9b0;
+    --accent-dim: #3a9b84;
+    --font-mono: 'Hack', 'Monaco', 'Courier New', monospace;
+}
+
+/* ========================================
+   Global Styles & Reset
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   Scanlines Effect (Very Subtle)
+   ======================================== */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    animation: scanline-move 30s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes scanline-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* ========================================
+   Main Terminal Container
+   ======================================== */
+.terminal-container {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* ========================================
+   Header Section
+   ======================================== */
+.terminal-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.terminal-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 3px rgba(78, 201, 176, 0.2);
+    letter-spacing: -0.5px;
+}
+
+.terminal-title {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   Blinking Cursor Animation
+   ======================================== */
+.cursor {
+    display: inline-block;
+    color: var(--accent-color);
+    animation: cursor-blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   Stats Section
+   ======================================== */
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.stats-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+}
+
+.stats-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* ========================================
+   Footer / Links Section
+   ======================================== */
+.terminal-footer {
+    margin-top: 2rem;
+}
+
+.terminal-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.prompt {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.separator {
+    color: var(--text-secondary);
+}
+
+.terminal-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+.terminal-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(78, 201, 176, 0.1);
+    text-shadow: 0 0 5px rgba(78, 201, 176, 0.3);
+}
+
+.terminal-link:active {
+    transform: translateY(1px);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 768px) {
+    .terminal-name {
+        font-size: 2rem;
+    }
+    
+    .terminal-title {
+        font-size: 1rem;
+    }
+    
+    .terminal-container {
+        gap: 2rem;
+    }
+    
+    .stats-section {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .terminal-name {
+        font-size: 1.75rem;
+    }
+    
+    .terminal-title {
+        font-size: 0.9rem;
+    }
+    
+    .terminal-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .separator {
+        display: none;
+    }
+}
+
+/* ========================================
+   Accessibility
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    .cursor {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .scanlines {
+        animation: none;
+    }
+    
+    .stats-card:hover {
+        transform: none;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.terminal-link:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
