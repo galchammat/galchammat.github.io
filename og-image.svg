@@ -1,0 +1,12 @@
+<svg width="495" height="470" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Background -->
+  <rect width="495" height="470" fill="#0d1117"/>
+  
+  <!-- Stats Card -->
+  <image x="0" y="0" width="495" height="195" 
+         xlink:href="https://github-readme-stats-git-master-ghazi-alchammats-projects.vercel.app/api?username=galchammat&amp;show_icons=true&amp;theme=dark&amp;hide=stars,contribs&amp;include_all_commits=true&amp;count_private=true&amp;hide_rank=true&amp;hide_border=true&amp;bg_color=0d1117&amp;title_color=4ec9b0&amp;icon_color=4ec9b0&amp;text_color=d4d4d4&amp;card_width=495"/>
+  
+  <!-- Languages Card -->
+  <image x="0" y="215" width="495" height="255" 
+         xlink:href="https://github-readme-stats-git-master-ghazi-alchammats-projects.vercel.app/api/top-langs/?username=galchammat&amp;theme=dark&amp;layout=compact&amp;hide=text,json,markdown,yaml,xml,toml,ini,cfg,jupyter%20notebook,css&amp;count_private=true&amp;hide_border=true&amp;bg_color=0d1117&amp;title_color=4ec9b0&amp;text_color=d4d4d4&amp;card_width=495"/>
+</svg>
