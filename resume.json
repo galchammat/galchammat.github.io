@@ -28,7 +28,6 @@
       "location": "Remote, Muscat, Oman",
       "description": "Custom SaaS solutions provider.",
       "position": "Data Engineer",
-      "url": "rihal.om",
       "startDate": "2025-04",
       "highlights": [
         "Developed a data lakehouse integrating heterogeneous data from 600 government and private entities across Oman’s GDP-critical sectors into a centralized auditing platform (Go, MinIO, Keycloak, Vite, shadcn/ui, ML components)",
@@ -40,7 +39,6 @@
       "location": "Calgary, AB",
       "description": "Pipeline monitoring company providing real-time leak detection via fiber-optic sensing, IoT data pipelines, and machine learning.",
       "position": "Systems Engineer",
-      "url": "hifiengineering.com",
       "startDate": "2020-01",
       "endDate": "2024-10",
       "highlights": [
@@ -55,7 +53,6 @@
       "location": "Vancouver, BC",
       "description": "Department of UBC that handles technical services accross faculties.",
       "position": "Developer",
-      "url": "ctlt.ubc.ca/",
       "startDate": "2018-09",
       "endDate": "2019-05",
       "highlights": [
@@ -67,7 +64,6 @@
       "location": "Remote, Verona, Italy",
       "description": "Custom HVAC solutions vendor undergoing digital transformation.",
       "position": "Developer (Deliverable-Contract)",
-      "url": "mekar.it",
       "startDate": "2024-04",
       "highlights": [
         "Automated generation of official project documents from dispersed data, replacing a manual process that consumed most of one employee’s time.",
@@ -78,7 +74,6 @@
   "education": [
     {
       "institution": "University of British Columbia - Vancouver",
-      "url": "ubc.ca",
       "area": "BASc ECE",
       "studyType": "Bachelor",
       "startDate": "2014-08",
@@ -91,28 +86,6 @@
       "date": "2025-04",
       "awarder": "Rihal - Data Migration and Services",
       "summary": "First place submission in solo hackathon - https://github.com/galchammat/ghazi-rihal-codestacker"
-    },
-    {
-      "title": "Py Discord Code Jam 2024 Top 3",
-      "date": "2024-11",
-      "awarder": "Py Discord",
-      "summary": "Third place submission in a team-based coding competition."
-    }
-  ],
-  "publications": [
-    {
-      "name": "Factory to familiar in one command",
-      "publisher": "galchammat",
-      "releaseDate": "2026-01-30",
-      "url": "https://dev.to/galchammat",
-      "summary": "Zero-touch Linux dev environment provisioner using a 90+ task Ansible playbook."
-    },
-    {
-      "name": "Homelab distributed system",
-      "publisher": "galchammat",
-      "releaseDate": "2026-01-30",
-      "url": "https://dev.to/galchammat",
-      "summary": "Using Tailscale to connect machines running a Go daemon, SQL backup storage, GitHub Actions, and more."
     }
   ],
   "skills": [
@@ -234,7 +207,7 @@
   "projects": [
     {
       "name": "Clip Generator",
-      "description": "Finds and cuts highlights from longform content based on the speaker's A/V input and event timestamps fetched from game APIs",
+      "description": "Finds and cuts highlights from longform content based on the speaker's A/V input and event timestamps fetched from game APIs. Features a distributed system hosting go daemon, sql backups, gh actions runners, and a wails fullstack application.",
       "keywords": [
         "wails (go + react)",
         "tuned models",
@@ -244,6 +217,19 @@
       "startDate": "2025-09",
       "url": "https://github.com/galchammat/kadeem",
       "type": "application"
+    },
+    {
+      "name": "Ubuntu Dev Environment Provisoner",
+      "description": "Developed Ansible playbook (90+ tasks) and dotfiles to transform new Ubuntu devices into development-ready environments with zero manual intervention. Setup includes ssh key generation, and installation and config of gh, git, tmux, nvim with essential plugins, opencode, and other tools.", 
+      "keywords": [
+        "ansible",
+        "dotfiles",
+        "bash",
+        "ubuntu"
+      ],
+      "startDate": "2026-01",
+      "url": "https://github.com/galchammat/.dotfiles",
+      "type": "infrastructure as code"
     }
   ],
   "meta": {
