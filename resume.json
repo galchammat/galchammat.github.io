@@ -1,0 +1,254 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ghazi Alchammat",
+    "label": "Fullstack · DevOps · Data Eng",
+    "image": "https://avatars.githubusercontent.com/u/60889398?v=4",
+    "email": "alchammatg@gmail.com",
+    "phone": "(778) 682-5526",
+    "summary": "UBC ECE graduate with 6 years of experience shipping data-driven systems, building CI/CD pipelines, and leading small teams. Linux-native, fullstack capable, and actively building—from conventional projects to AI model tuning and experimentation.",
+    "location": {
+      "address": "36 Patterson Mews SW Calgary",
+      "postalCode": "T3H2C6",
+      "city": "Calgary",
+      "countryCode": "CA",
+      "region": "AB"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "galchammat",
+        "url": "https://www.github.com/galchammat"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Rihal - Data Migration and Services",
+      "location": "Remote, Muscat, Oman",
+      "description": "Custom SaaS solutions provider.",
+      "position": "Data Engineer",
+      "url": "rihal.om",
+      "startDate": "2025-04",
+      "highlights": [
+        "Developed a data lakehouse integrating heterogeneous data from 600 government and private entities across Oman’s GDP-critical sectors into a centralized auditing platform (Go, MinIO, Keycloak, Vite, shadcn/ui, ML components)",
+        "Building CI/CD pipelines for existing projects and laying the groundwork for future projects based on the organization's core stack."
+      ]
+    },
+    {
+      "name": "Hifi Engineering Inc.",
+      "location": "Calgary, AB",
+      "description": "Pipeline monitoring company providing real-time leak detection via fiber-optic sensing, IoT data pipelines, and machine learning.",
+      "position": "Systems Engineer",
+      "url": "hifiengineering.com",
+      "startDate": "2020-01",
+      "endDate": "2024-10",
+      "highlights": [
+        "Reduced AWS costs by 82% ($192,000) with logic and stack optimizations.",
+        "Built ML pipeline for analysis, training, and deployment across 100+ servers.",
+        "Streamlined cleaning, computation, and storage of large datasets including pipeline as-built measurements and high-frequency sensor data.",
+        "Led a three-person team implementing CI/CD practices that improved deployment reliability and speed."
+      ]
+    },
+    {
+      "name": "CTLT",
+      "location": "Vancouver, BC",
+      "description": "Department of UBC that handles technical services accross faculties.",
+      "position": "Developer",
+      "url": "ctlt.ubc.ca/",
+      "startDate": "2018-09",
+      "endDate": "2019-05",
+      "highlights": [
+        "Built an automation app adopted accross UBC to migrate thousands of courses between portals using APIs and Web scrapers."
+      ]
+    },
+    {
+      "name": "Mekar Srl",
+      "location": "Remote, Verona, Italy",
+      "description": "Custom HVAC solutions vendor undergoing digital transformation.",
+      "position": "Developer (Deliverable-Contract)",
+      "url": "mekar.it",
+      "startDate": "2024-04",
+      "highlights": [
+        "Automated generation of official project documents from dispersed data, replacing a manual process that consumed most of one employee’s time.",
+        "Developing RAG to automate customer QA."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of British Columbia - Vancouver",
+      "url": "ubc.ca",
+      "area": "BASc ECE",
+      "studyType": "Bachelor",
+      "startDate": "2014-08",
+      "endDate": "2019-04"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Codestacker Hackathon Winner",
+      "date": "2025-04",
+      "awarder": "Rihal - Data Migration and Services",
+      "summary": "First place submission in solo hackathon - https://github.com/galchammat/ghazi-rihal-codestacker"
+    },
+    {
+      "title": "Py Discord Code Jam 2024 Top 3",
+      "date": "2024-11",
+      "awarder": "Py Discord",
+      "summary": "Third place submission in a team-based coding competition."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Factory to familiar in one command",
+      "publisher": "galchammat",
+      "releaseDate": "2026-01-30",
+      "url": "https://dev.to/galchammat",
+      "summary": "Zero-touch Linux dev environment provisioner using a 90+ task Ansible playbook."
+    },
+    {
+      "name": "Homelab distributed system",
+      "publisher": "galchammat",
+      "releaseDate": "2026-01-30",
+      "url": "https://dev.to/galchammat",
+      "summary": "Using Tailscale to connect machines running a Go daemon, SQL backup storage, GitHub Actions, and more."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Proficient",
+      "keywords": [
+        "HTML / JSX",
+        "CSS / Tailwind",
+        "Typescript",
+        "GraphQL",
+        "Go Fiber",
+        "Py Flask"
+      ]
+    },
+    {
+      "name": "AWS",
+      "level": "Proficient",
+      "keywords": [
+        "Kinesis",
+        "Lambda",
+        "S3",
+        "IAM",
+        "RDS / Dynamo / Timestream",
+        "Cloudformation"
+      ]
+    },
+    {
+      "name": "CI/CD",
+      "level": "Advanced",
+      "keywords": [
+        "GH Actions",
+        "CircleCI",
+        "Bash",
+        "Ansible",
+        "Terraform",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Databases",
+      "level": "Advanced",
+      "keywords": [
+        "SQL",
+        "MongoDB",
+        "Redis",
+        "Data Modeling"
+      ]
+    },
+    {
+      "name": "Networks",
+      "level": "Intermediate",
+      "keywords": [
+        "SSH/SFTP",
+        "VPC",
+        "Tailscale",
+        "Cloudflare ZT"
+      ]
+    },
+    {
+      "name": "Observability",
+      "level": "Intermediate",
+      "keywords": [
+        "Grafana Loki",
+        "LogDNA",
+        "Sentry",
+        "SendGrid",
+        "Webhooks"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "Advanced",
+      "keywords": [
+        "Ubuntu",
+        "Dotfiles",
+        "Bash",
+        "System Administration",
+        "Cron"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Computer Vision",
+      "keywords": [
+        "YOLO",
+        "PaliGemma"
+      ]
+    },
+    {
+      "name": "Productivity",
+      "keywords": [
+        "nvim plugins",
+        "steveyegge/gastown"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Aman Parmar",
+      "reference": "Team Lead at Hifi Engineering"
+    },
+    {
+      "name": "Natasha Boskic",
+      "reference": "Director at UBC ETS"
+    },
+    {
+      "name": "Mahir Tuli",
+      "reference": "Contract Client"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Clip Generator",
+      "description": "Finds and cuts highlights from longform content based on the speaker's A/V input and event timestamps fetched from game APIs",
+      "keywords": [
+        "wails (go + react)",
+        "tuned models",
+        "tailscale",
+        "gh actions"
+      ],
+      "startDate": "2025-09",
+      "url": "https://github.com/galchammat/kadeem",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/sample.resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
