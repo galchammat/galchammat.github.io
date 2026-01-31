@@ -30,7 +30,7 @@
       "position": "Data Engineer",
       "startDate": "2025-04",
       "highlights": [
-        "Developed a data lakehouse integrating heterogeneous data from 600 government and private entities across Oman’s GDP-critical sectors into a centralized auditing platform (Go, MinIO, Keycloak, Vite, shadcn/ui, ML components)",
+        "Developed a data lakehouse integrating heterogeneous data from 600 government and private entities across Oman’s GDP-critical sectors. (Go, MinIO, Keycloak, Vite, shadcn/ui, ML components)",
         "Building CI/CD pipelines for existing projects and laying the groundwork for future projects based on the organization's core stack."
       ]
     },
@@ -44,7 +44,6 @@
       "highlights": [
         "Reduced AWS costs by 82% ($192,000) with logic and stack optimizations.",
         "Built ML pipeline for analysis, training, and deployment across 100+ servers.",
-        "Streamlined cleaning, computation, and storage of large datasets including pipeline as-built measurements and high-frequency sensor data.",
         "Led a three-person team implementing CI/CD practices that improved deployment reliability and speed."
       ]
     },
@@ -56,7 +55,7 @@
       "startDate": "2018-09",
       "endDate": "2019-05",
       "highlights": [
-        "Built an automation app adopted accross UBC to migrate thousands of courses between portals using APIs and Web scrapers."
+        "Single-handedly automated the portal migration of courses at UBC in an app that was adopted by all faculties, savings thousands of man-hours."
       ]
     },
     {
