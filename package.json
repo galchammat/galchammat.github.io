@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "init": "resumed init",
+    "start": "npm run html && npm run pdf",
     "pdf": "node index.js",
     "html": "resumed --theme jsonresume-theme-even"
   },
