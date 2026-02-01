@@ -24,24 +24,27 @@ jobs:
         run: |
           # Check if resume.html or resume.pdf changed in the same commit
           if git diff HEAD^ HEAD --name-only | grep -q "resume.html"; then
-            echo "html_changed=true" >> $GITHUB_OUTPUT
+            html_changed=true
           else
-            echo "html_changed=false" >> $GITHUB_OUTPUT
+            html_changed=false
           fi
           
           if git diff HEAD^ HEAD --name-only | grep -q "resume.pdf"; then
-            echo "pdf_changed=true" >> $GITHUB_OUTPUT
+            pdf_changed=true
           else
-            echo "pdf_changed=false" >> $GITHUB_OUTPUT
+            pdf_changed=false
           fi
           
+          echo "html_changed=$html_changed" >> $GITHUB_OUTPUT
+          echo "pdf_changed=$pdf_changed" >> $GITHUB_OUTPUT
+          
           # Should run if html didn't change OR pdf didn't change
-          if [[ "${{ steps.check.outputs.html_changed }}" == "false" ]] || [[ "${{ steps.check.outputs.pdf_changed }}" == "false" ]]; then
+          if [[ "$html_changed" == "false" ]] || [[ "$pdf_changed" == "false" ]]; then
             echo "should_run=true" >> $GITHUB_OUTPUT
           else
             echo "should_run=false" >> $GITHUB_OUTPUT
           fi
-        
+       
       - name: Setup Node.js
         if: steps.check.outputs.should_run == 'true'
         uses: actions/setup-node@v4
