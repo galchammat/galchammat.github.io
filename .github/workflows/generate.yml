@@ -1,0 +1,73 @@
+name: Generate and Commit Files
+
+on:
+  push:
+    branches:
+      - main
+      - actions-generate
+    paths:
+      - 'resume.json'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+        
+      - name: Check if regeneration needed
+        id: check
+        run: |
+          # Check if resume.html or resume.pdf changed in the same commit
+          if git diff HEAD^ HEAD --name-only | grep -q "resume.html"; then
+            html_changed=true
+          else
+            html_changed=false
+          fi
+          
+          if git diff HEAD^ HEAD --name-only | grep -q "resume.pdf"; then
+            pdf_changed=true
+          else
+            pdf_changed=false
+          fi
+          
+          echo "html_changed=$html_changed" >> $GITHUB_OUTPUT
+          echo "pdf_changed=$pdf_changed" >> $GITHUB_OUTPUT
+          
+          # Should run if html didn't change OR pdf didn't change
+          if [[ "$html_changed" == "false" ]] || [[ "$pdf_changed" == "false" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+        
+      - name: Setup Chrome
+        if: steps.check.outputs.should_run == 'true'
+        uses: browser-actions/setup-chrome@v1
+        
+      - name: Setup Node.js
+        if: steps.check.outputs.should_run == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        if: steps.check.outputs.should_run == 'true'
+        run: npm install
+        
+      - name: Generate files
+        if: steps.check.outputs.should_run == 'true'
+        run: npm start
+        
+      - name: Commit and push if changed
+        if: steps.check.outputs.should_run == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add resume.html resume.pdf
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate resume files [skip ci]" && git push)
+
