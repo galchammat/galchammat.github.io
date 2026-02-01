@@ -218,7 +218,7 @@
     },
     {
       "name": "Ubuntu Dev Environment Provisoner",
-      "description": "Dotfiles and an Ansible playbook (110+ tasks) that transform new Ubuntu devices into development-ready environments with zero manual intervention. Setup includes ssh key generation, and installation and config of gh, git, tmux, nvim with essential plugins, opencode, and other tools.", 
+      "description": "Dotfiles and an Ansible playbook (116+ tasks) that transform new Ubuntu devices into development-ready environments with zero manual intervention. Setup includes ssh key generation, and installation and config of gh, git, tmux, nvim with essential plugins, opencode, and other tools.", 
       "keywords": [
         "ansible",
         "dotfiles",

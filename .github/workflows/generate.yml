@@ -6,7 +6,7 @@ on:
       - main
       - actions-generate
     paths:
-      - 'resume.json'  # only trigger when resume.json changes
+      - 'resume.json'
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # need previous commit to check what changed
+          fetch-depth: 2
         
       - name: Check if regeneration needed
         id: check
@@ -44,7 +44,11 @@ jobs:
           else
             echo "should_run=false" >> $GITHUB_OUTPUT
           fi
-       
+        
+      - name: Setup Chrome
+        if: steps.check.outputs.should_run == 'true'
+        uses: browser-actions/setup-chrome@v1
+        
       - name: Setup Node.js
         if: steps.check.outputs.should_run == 'true'
         uses: actions/setup-node@v4
@@ -66,3 +70,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add resume.html resume.pdf
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate resume files [skip ci]" && git push)
+
