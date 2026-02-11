@@ -6,7 +6,7 @@
     "image": "https://avatars.githubusercontent.com/u/60889398?v=4",
     "email": "alchammatg@gmail.com",
     "phone": "(778) 682-5526",
-    "summary": "UBC ECE graduate with 6 years of experience shipping data-driven systems, building CI/CD pipelines, and leading small teams. Linux-native, fullstack capable, and actively building—from conventional projects to AI model tuning and experimentation.",
+    "summary": "Software Engineer (UBC ECE) with 6 years of experience building production data systems and cloud-native services. Skilled in full-stack development, CI/CD, and Linux environments, with experience leading small engineering teams and applying AI/ML experimentation in production.",
     "location": {
       "address": "36 Patterson Mews SW Calgary",
       "postalCode": "T3H2C6",
@@ -186,20 +186,6 @@
         "nvim plugins",
         "steveyegge/gastown"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Aman Parmar",
-      "reference": "Team Lead at Hifi Engineering"
-    },
-    {
-      "name": "Natasha Boskic",
-      "reference": "Director at UBC ETS"
-    },
-    {
-      "name": "Mahir Tuli",
-      "reference": "Contract Client"
     }
   ],
   "projects": [
