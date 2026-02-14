@@ -6,7 +6,7 @@
     "image": "https://avatars.githubusercontent.com/u/60889398?v=4",
     "email": "alchammatg@gmail.com",
     "phone": "(778) 682-5526",
-    "summary": "Senior software engineer with 6+ years building high-impact full-stack applications, cloud infrastructure, and data systems. Proven track record of scaling services, reducing costs, and leading engineering initiatives that accelerate delivery and improve reliability.",
+    "summary": "Senior software engineer with 6+ years building full-stack applications, cloud infrastructure, and data systems. Proven track record of scaling services, reducing costs, and leading reliable engineering initiatives.",
     "location": {
       "address": "36 Patterson Mews SW",
       "postalCode": "T3H2C6",
@@ -26,18 +26,28 @@
     {
       "name": "Rihal - Data Migration and Services",
       "location": "Remote, Muscat, Oman",
-      "position": "Lead Data Engineer",
+      "position": "Senior Data Engineer",
       "startDate": "2025-04",
       "highlights": [
-        "Consolidated 600+ government and private datasets into a centralized data lakehouse, enabling cross-sector analytics and governance insights previously impossible.",
-        "Automated ETL pipelines, reducing data processing time by 70% and freeing the equivalent of 3 FTEs of manual effort.",
-        "Designed CI/CD and infrastructure patterns that scaled services reliably for future multi-team expansions."
+        "Consolidated 600+ government and private datasets into a centralized data lakehouse, enabling cross-sector analytics and governance insights.",
+        "Designing CI/CD and infrastructure patterns that scale services reliably."
+      ]
+    },
+    {
+      "name": "Mekar Srl",
+      "location": "Remote, Verona, Italy",
+      "position": "Developer (Deliverables)",
+      "startDate": "2024-10",
+      "endDate": "2025-04",
+      "highlights": [
+        "Automated document generation processes, eliminating manual work and accelerating delivery for client operations.",
+        "Implemented a retrieval-augmented QA system to automate customer support for product inquiries, reducing response time by 80%."
       ]
     },
     {
       "name": "Hifi Engineering Inc.",
       "location": "Calgary, AB",
-      "position": "Senior Systems Engineer",
+      "position": "Systems Engineer",
       "startDate": "2020-01",
       "endDate": "2024-10",
       "highlights": [
@@ -54,16 +64,6 @@
       "endDate": "2019-05",
       "highlights": [
         "Automated cross-faculty course portal migration, saving thousands of manual work hours and eliminating manual errors in course data."
-      ]
-    },
-    {
-      "name": "Mekar Srl",
-      "location": "Remote, Verona, Italy",
-      "position": "Developer (Deliverables)",
-      "startDate": "2024-04",
-      "highlights": [
-        "Automated document generation processes, eliminating manual work and accelerating delivery for client operations.",
-        "Implemented a retrieval-augmented QA system to automate customer support for product inquiries, reducing response time by 80%."
       ]
     }
   ],
@@ -113,16 +113,11 @@
   ],
   "projects": [
     {
-      "name": "Clip Generator",
-      "description": "Automated highlight extraction and clipping from long-form content, improving workflow efficiency for content creators.",
-      "url": "https://github.com/galchammat/kadeem",
-      "startDate": "2025-09"
-    },
-    {
       "name": "Ubuntu Dev Environment Provisioner",
       "description": "Built zero-touch Ubuntu developer setup, enabling fresh installs to be ready for production-grade development without manual configuration.",
       "url": "https://github.com/galchammat/.dotfiles",
-      "startDate": "2026-01"
+      "startDate": "2026-01",
+      "endDate": "2026-02"
     }
   ]
 }

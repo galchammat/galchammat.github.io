@@ -5,11 +5,11 @@
     "init": "resumed init",
     "start": "npm run html && npm run pdf",
     "pdf": "node index.js",
-    "html": "resumed --theme jsonresume-theme-even"
+    "html": "resumed --theme jsonresume-theme-even && mv resume.html index.html"
   },
   "dependencies": {
     "jsonresume-theme-even": "^0.17.0",
-    "puppeteer": "^13.0.0",
+    "puppeteer": "^24.37.3",
     "resumed": "^3.0.0"
   }
 }

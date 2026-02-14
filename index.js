@@ -12,11 +12,14 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage()
 
 await page.setContent(html, { waitUntil: 'networkidle0' })
+
+await page.emulateMediaType('screen')
+
 await page.pdf({
   path: 'resume.pdf',
   format: 'a4',
   printBackground: true,
-  scale: 0.7,
+  scale: 0.95,
 })
 
 await browser.close()
