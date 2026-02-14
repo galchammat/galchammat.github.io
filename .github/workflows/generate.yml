@@ -22,8 +22,8 @@ jobs:
       - name: Check if regeneration needed
         id: check
         run: |
-          # Check if resume.html or resume.pdf changed in the same commit
-          if git diff HEAD^ HEAD --name-only | grep -q "resume.html"; then
+          # Check if index.html or resume.pdf changed in the same commit
+          if git diff HEAD^ HEAD --name-only | grep -q "index.html"; then
             html_changed=true
           else
             html_changed=false
@@ -68,7 +68,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          mv resume.html index.html
           git add index.html resume.pdf
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate resume files [skip ci]" && git push)
 
